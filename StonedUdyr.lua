@@ -1,13 +1,13 @@
 --[[
 	StonedUdyr
-	by uhGery
+	by WizGery
 	V 0.8
 ]]--
 local version = "0.8"
 
 local AUTOUPDATE = true
 local UPDATE_HOST = "raw.github.com"
-local UPDATE_PATH = "/uhGery/BoL/master/StonedUdyr.lua".."?rand="..math.random(1,10000)
+local UPDATE_PATH = "/WizGery/BoL/master/StonedUdyr.lua".."?rand="..math.random(1,10000)
 local UPDATE_FILE_PATH = SCRIPT_PATH..GetCurrentEnv().FILE_NAME
 local UPDATE_URL = "https://"..UPDATE_HOST..UPDATE_PATH
 local lastRG = 0
@@ -34,7 +34,7 @@ end
 function _AutoupdaterMsg(msg) print("<font color=\"#1C942A\">Stoned</font><font color =\"#DBD142\">Udyr</font> <font color=\"#FFFFFF\">"..msg..".</font>") end
 
 if AUTOUPDATE then
-	local ServerData = GetWebResult(UPDATE_HOST, "/uhGery/BoL/master/Version/StonedUdyr.version")
+	local ServerData = GetWebResult(UPDATE_HOST, "/WizGery/BoL/master/Version/StonedUdyr.version")
 	if ServerData then
 		ServerVersion = type(tonumber(ServerData)) == "number" and tonumber(ServerData) or nil
 		if ServerVersion then
@@ -108,7 +108,7 @@ function OnLoad()
 		loaded = true
 		DrawMenu()
 		
-		print("<font color=\"#1C942A\">Stoned</font><font color =\"#DBD142\">Udyr</font> <font color =\"#FF0000\">by uhGery</font> <font color =\"#000000\">V"..version.."</font>")
+		print("<font color=\"#1C942A\">Stoned</font><font color =\"#DBD142\">Udyr</font> <font color =\"#FF0000\">by WizGery</font> <font color =\"#000000\">V"..version.."</font>")
 
 		Config.KeySettings:permaShow("Combo")
 		Config.KeySettings:permaShow("Clear")
